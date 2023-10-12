@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(2, 12, 18);
+    color: rgb(188, 202, 244);
+    font-family: sans-serif;
+    
+}
+
+h1{
+    /* font-size: 100px; */
+}
+
+.big{
+    font-size: 100px;
+    font-family: monospace;
+    font-weight: 100;
+}
+
+#red{
+    color: coral;
+}
+#orange{
+    color: orange;
+}
+#yellow{
+    color: gold;
+}
+#pink{
+    color: lightpink;
+}
