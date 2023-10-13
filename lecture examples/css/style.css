@@ -24,6 +24,40 @@ h1{
 #yellow{
     color: gold;
 }
-#pink{
+
+
+a{
     color: lightpink;
+    font-size: 20px;
+}
+a:hover{
+ color: deeppink;
+ font-size: 30px;
+}
+
+#title{
+    text-align: center;
+}
+#content{
+    width: 50%;
+    position: relative;
+    left: 15%;
+    padding: 50px;
+}
+.left{
+    float: left;
+    width: 50%;
+}
+.right{
+    float: right;
+    width: 50%;
+}
+two-coloums:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img{
+    width: 70%
 }
