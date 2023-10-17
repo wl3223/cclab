@@ -1,3 +1,4 @@
+//values for creature
 let x1, y1, xSpd, ySpd, f, circleSize;
 let dirX = 1;
 let dirY = 1;
@@ -9,31 +10,31 @@ let num = 30;
 let color1;
 let creatureSize = [];
 let a = 30;
-let ty1, ty2, ty3, tx1, tx2, tx3;
 
-let tail =[[[10, 20, 20],[-10,-20, -20]]];
 
-//define a color array//
-let colorFish = []; // color array
-
+//values for bubbles
 let sbu = [];
 let xbu = [];
 let ybu = [];
 let sxbu = [];
 let sybu = [];
 
+//values for fish
 let sf = [];
 let xf = [];
 let yf = [];
 let sxf = [];
 let syf = [];
-
+let tail =[[[10, 20, 20],[-10,-20, -20]]];
+let ty1, ty2, ty3, tx1, tx2, tx3;
+//define a color array//
+let colorFish = []; 
 let r, g, b, tp;
 
 function setup() {
-    let canvas = createCanvas(400, 400);
-    canvas.parent("p5-canvas");
-  //createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(400, 400);
+  //canvas.id("p5-canvas");
+  canvas.parent("p5-canvas");
   x1 = random(width/2);
   y1 = random(height/2);
   xSpd = 0;
@@ -44,8 +45,7 @@ function setup() {
     ya[i] = 0;
   }
 
-  //store a new color to the color array//hhh
-  // here you create 10 random colors and store them
+  //store a new color to the color array//
 
   r = random(0, 255);
   g = random(0, 255);
@@ -57,9 +57,7 @@ function setup() {
 
 function draw() {
   background(150, 190, 220);
-  // if (flag){
-  // x1 = map(sin(frameCount*0.03),-1,1,230,280) + noise(frameCount * 0.01);
-  // }
+  
   if (keyIsPressed) {
     flag = true;
     // if key is pressed, increase the acceleration.
@@ -90,10 +88,10 @@ function draw() {
   x1 += xSpd;
   y1 += ySpd;
 
-  if (x1 <= 0 || x1 >= windowWidth) {
+  if (x1 <= 0 || x1 >= width) {
     xSpd *= -1;
   }
-  if (y1 <= 0 || y1 >= windowHeight) {
+  if (y1 <= 0 || y1 >= height) {
     ySpd *= -1;
   }
   // console.log(xSpd,ySpd,dirX,dirY);
@@ -227,12 +225,6 @@ function keyPressed() {
     tail.push([[10, 20, 20],[-10,-20, -20]]);
     console.log(colorFish);
   }
-  // if (keyCode==71){
-  //   fill(255,230,64,200)
-  //   circle(xa[0],ya[0],30)
-  //   fill(236,220,115,100)
-  //   circle(xa[0],ya[0],50)
-  //}
 }
 
 function drawBubble(u, v, s) {
@@ -242,38 +234,21 @@ function drawBubble(u, v, s) {
   circle(u, v, s);
 }
 
-function drawFish(u, v, s, c, dir) {
+function drawFish(u, v, s, i, dir) {
   push();
   translate(u, v);
-  // randomColor1=random(0,255)
-  // randomColor2=random(0,255)
-  // randomColor3=random(0,255)
-
-  // if(xa[0]==xf[0] || ya[0]==yf[0] ){
-  //   tp=0
-  // }else{
-  //   tp=100
-  // }
   tp = 200;
-  let redV = colorFish[c][0];
-  let greenV = colorFish[c][1];
-  let blueV = colorFish[c][2];
+  let redV = colorFish[i][0];
+  let greenV = colorFish[i][1];
+  let blueV = colorFish[i][2];
   fill(redV, greenV, blueV, tp);
 
   noStroke();
   ellipse(0, 0, 25, 15);
-  // if(sxf[i]>=0) {
-  //   triangle(-10,0,-20,10,-20,-10)
-  // }
-  // if(sxf[i]<0) {
-  //   triangle(10,0,20,10,20,-10)
-  // }
-  triangle(tail[c][dir][0], ty1, tail[c][dir][1], ty2, tail[c][dir][2], ty3);
+
+  triangle(tail[i][dir][0], ty1, tail[i][dir][1], ty2, tail[i][dir][2], ty3);
   pop();
 
-  // if(xa[0]==xf[0] || ya[0]==yf[0] ){
-  // drawFish.hide();
-  // }
 }
 
 //check fish delete
