@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#game{
+  margin: 10px;
+  display: block;
+
+}
+#tutorial{
+  margin: 10px;
+  display: block;
+}
