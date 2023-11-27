@@ -1,6 +1,7 @@
 
 
-  body {
+body {
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,39 +18,26 @@
   /* Header styling */
   .header {
     width: 1100px;
-    background: rgba(255, 255, 255, 0.8); /* Add a white transparent background to make the text more readable */
-    padding: 10px;
-    font-size: 20px; /* Increase font size */
+    background: rgba(255, 255, 255, 0.8); 
+    font-size: 20px; 
     margin: 20px;
     text-align: center;
   }
   
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
   /* Container for boxes */
   .box-container {
     display: flex;
     justify-content: center;
     padding: 20px;
   }
-  
-  /* Styling for the hero boxes */
-  .hero-box {
-    width: 400px; /* Width of the box */
-    height: 400px; /* Height of the box */
-   
-    border-radius: 15px; /* Rounded corners of the box */
-    margin: 0 100px; /* Add some space between the boxes */
-  }
-  
-  /* Ensure the content is vertically and horizontally centered */
-
-.content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
- }
-
 
   .text1{
     font-weight: bolder;
@@ -58,7 +46,7 @@
     width: 900px;
     margin: 10px;
     text-align: center;
-
+  
   }
   .text2{
     font-weight: bolder;
@@ -68,7 +56,6 @@
     margin: 10px;
     padding: 10px;
     text-align: left;
-    background: rgba(0,0,0,0.6);
   }
   .text3{
     font-weight: bolder;
@@ -78,18 +65,6 @@
     text-align: left;
   }
 
-#white{
-    color: whitesmoke;
-}
-#black{
-  color: black;
-}
-#darkpink{
-  color: rgb(149, 17, 17);
-}
-#darkblue{
-  color: rgb(0, 60, 98);
-}
 
 
   canvas{
@@ -101,27 +76,8 @@
   height:100% !important;
 }
 
-.box3{
- background-color: rgba(255,182,193,0.5);
-}
-.box4{
-  background-color: rgba(135,206,250,0.5);
- }
 
- .box3:hover .text3 {
-  color: rgb(6, 64, 93); /* Replace with the color you want on hover for box3 */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-  font-size: 1.8em;
-  background-color: lightpink;
-}
 
-/* Add hover effect for text inside box4 */
-.box4:hover .text3 {
-  color: rgb(135,206,250); /* Replace with the color you want on hover for box4 */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-  font-size: 1.8em;
-  background-color: lightskyblue;
-}
 
 .button-container {
   display: flex;
@@ -146,4 +102,14 @@
 
 #startButton:hover {
   background-image: linear-gradient(to right, rgb(255, 129, 18), rgb(48, 211, 160)); /* Darker gradient on hover */
+}
+
+.skecth-box{
+
+width: 500px;
+height: 500px;
+margin: 10;
+padding: 0;
+background-color: brown;
+
 }
