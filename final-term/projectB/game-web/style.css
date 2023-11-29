@@ -1,27 +1,25 @@
 
 
 body {
-
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     font-family: Arial, sans-serif;
-    background-image: url('IMG_5605.JPG'); /* 确保这是正确的图片路径 */
-    background-size: cover; /* 覆盖整个背景，保持图片宽高比 */
-    background-repeat: no-repeat; /* 图片不重复 */
-    background-position: center; /* 图片居中显示 */
-    background-attachment: scroll; /* 背景图片随内容滚动 */
-
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: scroll; 
   }
   
   /* Header styling */
   .header {
-    width: 1100px;
-    background: rgba(255, 255, 255, 0.8); 
+    width: 1200px;
+    color: white;
     font-size: 20px; 
-    margin: 20px;
+ 
     text-align: center;
+    padding: 100px;
   }
   
   .content {
@@ -30,6 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
   /* Container for boxes */
@@ -37,32 +36,6 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-  }
-
-  .text1{
-    font-weight: bolder;
-    font-size: 50px;
-    -webkit-text-stroke: 2px whitesmoke;
-    width: 900px;
-    margin: 10px;
-    text-align: center;
-  
-  }
-  .text2{
-    font-weight: bolder;
-    font-size: 35px;
-    -webkit-text-stroke: 1px black;
-    width: 900px;
-    margin: 10px;
-    padding: 10px;
-    text-align: left;
-  }
-  .text3{
-    font-weight: bolder;
-    font-size: 25px;
-    margin: 10px;
-    padding: 10px;
-    text-align: left;
   }
 
 
@@ -76,6 +49,13 @@ body {
   height:100% !important;
 }
 
+#pink{
+  color: lightpink;
+}
+#blue{
+  color: lightskyblue;
+}
+
 
 
 
@@ -85,31 +65,38 @@ body {
   margin-top: 40px; /* Add space above the button */
 }
 
-#startButton {
+#startButton1 {
   padding: 20px 40px;
   border: none;
-  background-image: linear-gradient(to right, pink, blue);
-  color: white; /* Text color */
+  background-color: black;
+  color: black;
   font-weight: bold;
   font-size: 40px;
-  border-radius: 30px; /* Rounded corners */
-  border: 3px solid rgba(0, 0, 0, 0.8); /* Darker border */
-  cursor: pointer; /* Changes the mouse pointer on hover */
-  outline: none; /* Removes the outline */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 30px;
+}
+#startButton2 {
+  padding: 20px 40px;
+  border: none;
+  background-color: black;
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 30px;
 }
 
-#startButton:hover {
-  background-image: linear-gradient(to right, rgb(255, 129, 18), rgb(48, 211, 160)); /* Darker gradient on hover */
+#startButton1:hover {
+  color: white;
+  background-image: linear-gradient(to right, orange, lightpink); /* Darker gradient on hover */
+}
+#startButton2:hover {
+  color: white;
+  background-image: linear-gradient(to right, rgb(136, 0, 255),lightskyblue); /* Darker gradient on hover */
 }
 
 .skecth-box{
-
-width: 600px;
-height: 600px;
+width: 700px;
+height: 700px;
 margin: 10;
 padding: 0;
-background-color: brown;
-
+background-color:black;
 }

@@ -1,16 +1,17 @@
 
 
   body {
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     font-family: Arial, sans-serif;
-    background-image: url('IMG_5605.JPG'); /* 确保这是正确的图片路径 */
-    background-size: cover; /* 覆盖整个背景，保持图片宽高比 */
-    background-repeat: no-repeat; /* 图片不重复 */
-    background-position: center; /* 图片居中显示 */
-    background-attachment: scroll; /* 背景图片随内容滚动 */
+    background-image: url('IMG_5605.JPG'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: scroll; 
 
   }
   
@@ -40,7 +41,7 @@
     margin: 0 100px; /* Add some space between the boxes */
   }
   
-  /* Ensure the content is vertically and horizontally centered */
+ 
 
 .content {
         flex: 1;
@@ -109,17 +110,11 @@
  }
 
  .box3:hover .text3 {
-  color: rgb(6, 64, 93); /* Replace with the color you want on hover for box3 */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-  font-size: 1.8em;
   background-color: lightpink;
 }
 
 /* Add hover effect for text inside box4 */
 .box4:hover .text3 {
-  color: rgb(135,206,250); /* Replace with the color you want on hover for box4 */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-  font-size: 1.8em;
   background-color: lightskyblue;
 }
 

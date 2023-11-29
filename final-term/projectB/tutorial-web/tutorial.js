@@ -13,7 +13,7 @@
   }
   
   function setup() {
-    let canvas=createCanvas(500, 500);
+    let canvas=createCanvas(1200, 500);
     canvas.parent("tutorial")
 
     frameRate(50);

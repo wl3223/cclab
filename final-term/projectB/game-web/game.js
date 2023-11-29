@@ -40,10 +40,15 @@ function setup() {
   octopus = new Octopus(oi);
 }
 
-function draw() {
-  if (mySound.isPlaying() == false) {
+function keyPressed(){
+  if (keyCode==77);{
+    if (mySound.isPlaying() == false) {
     mySound.play();
+    }
   }
+}
+
+function draw() {
 
   push();
   colorMode(HSB, 100);
