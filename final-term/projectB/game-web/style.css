@@ -18,7 +18,7 @@ body {
     color: white;
     font-size: 20px; 
  
-    text-align: center;
+    text-align: left;
     padding: 100px;
   }
   
@@ -49,10 +49,10 @@ body {
   height:100% !important;
 }
 
-#pink{
-  color: lightpink;
+#s{
+  color: rgb(255,192,108);
 }
-#blue{
+#o{
   color: lightskyblue;
 }
 

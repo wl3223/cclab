@@ -1,0 +1,66 @@
+
+
+body {
+   background-image: linear-gradient(to bottom,lightpink, rgb(255,226,108),rgb(255, 129, 18)); 
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: scroll; 
+  }
+  
+  .header {
+    width: 1200px;
+    height: 600px;
+    color: white;
+    font-size: 20px; 
+    text-align: left;
+    padding: 100px;
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+}
+
+  .box-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+
+
+  canvas{
+    width:100% !important;
+    height:100% !important;
+ }
+ iframe{
+  width:100% !important;
+  height:100% !important;
+}
+
+#s{
+  color: rgb(253, 168, 56);
+  -webkit-text-stroke: 1px rgb(136, 58, 6);
+  text-shadow: 2px 2px 2px rgb(136, 58, 6);
+  }
+  #o{
+  color: rgb(113, 199, 252);
+  -webkit-text-stroke:1px rgb(12, 84, 165);
+  text-shadow: 2px 2px 2px rgb(12, 84, 165);
+  }
+#n{
+  text-shadow: 2px 2px 2px black;
+}
+
+
