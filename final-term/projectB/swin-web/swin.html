@@ -10,6 +10,20 @@
 </head>
 <body>
   <div class="content">
+    <button id="playButton">Audio</button>
+    <audio id="audioPlayer" src="sw.mp3"></audio>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function () {
+            var audio1 = document.getElementById('audioPlayer');
+            if (audio1.paused) {
+                audio1.play();
+            } else {
+                audio1.pause();
+            }
+        });
+    </script>
+
     <div class="header">
       <h2 id="n">What a colorful adventure it has been! With a whirl of warm hues, Squiddy dazzles everyone, painting the world with joy and laughter. Squiddy wins the color splash competition!</h2>
       <h2 id="s">"Yay! We did it! But remember, it's not just about winning; it's about bringing color and smiles to everyone. Let's keep painting the world together, Octopus!"</h2>

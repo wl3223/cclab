@@ -83,11 +83,13 @@
 #black{
   color: black;
 }
-#darkorange{
+#s{
   color: rgb(150,75,0);
+  font-family: 'Handlee', cursive;
 }
-#darkblue{
+#o{
   color: rgb(0, 60, 98);
+  font-family: 'Dekko', cursive;
 }
 
 

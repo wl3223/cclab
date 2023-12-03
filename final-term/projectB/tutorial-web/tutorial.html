@@ -7,23 +7,57 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=VT323&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:wght@700&family=VT323&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
   <div class="content">
+
+    <button id="playButton1">Audio 1</button>
+    <audio id="audioPlayer1" src="Hiya.mp3"></audio>
+
+    <script>
+        document.getElementById('playButton1').addEventListener('click', function () {
+            var audio1 = document.getElementById('audioPlayer1');
+            if (audio1.paused) {
+                audio1.play();
+            } else {
+                audio1.pause();
+            }
+        });
+  </script>
     <div class="header">
-      <h1>Squiddy Here!</h1>
-      <h2>"Hiya, friends! This place is too gloomy, don't you think? Time for a splash of happiness! Let's brighten things up with some warm, happy colors!"</h2>
+      <h1 id="s">Squiddy Here!</h1>
+      <h1 id="s">"Hiya, friends! This place is too gloomy, don't you think? Time for a splash of happiness! Let's brighten things up with some warm, happy colors!"</h1>
     </div>
       <div class="skecth-box">
         <div id="tutorial"></div>
       </div>
+      <button id="playButton2">Audio 2</button>
+      <audio id="audioPlayer2" src="Oh.mp3"></audio>
+      <script>
+        document.getElementById('playButton2').addEventListener('click', function () {
+            var audio2 = document.getElementById('audioPlayer2');
+            if (audio2.paused) {
+                audio2.play();
+            } else {
+                audio2.pause();
+            }
+        });
+    </script>
       <div class="header">
-        <h2>"Oh, what's this? A little drop of blue?"</h2>
-        <h2>"Oh hey, it's you, Octopus! Let's wiggle over and say hi!</h2>
+        <h1 id="s">"Oh, what's this? A little drop of blue?"</h1>
+        <h1 id="s">"Oh hey, it's you, Octopus! Let's wiggle over and say hi!</h1>
       </div>
-
   <div>
-
     
   </div>
   

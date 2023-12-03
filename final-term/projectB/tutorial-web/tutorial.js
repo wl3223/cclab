@@ -72,9 +72,9 @@
     squid.display();
     
     fill(255)
-    textSize(30)
-    text("Use WASD",10,30)
-    text("to control the squid",10,60)
+    textFont("VT323");
+    textSize(50)
+    text("Use WASD to control the squid",300,30)
   
   }
   

@@ -1,25 +1,27 @@
+
 let grid = [];
-let n = 20;
+let n = 30;
 let countNumS = [];
 let countNumO = [];
 let squid;
 let countS = 0;
 let countO = 0;
 let ifCount = false;
-let time = 5000; //frameRate20x15second\
+let time = 5000; 
 let result;
 let backcolor, backbase;
 let SquidColor = [];
 let OctopusColor = [];
+let timing, starttiming;
+
 
 function preload() {
   mySound = loadSound("splatoon.mp3");
 }
 
 function setup() {
-  let canvas=createCanvas(600, 600);
+  let canvas=createCanvas(1300, 800);
   canvas.parent("game")
-  frameRate(50);
 
   //background grid
   for (let i = 0; i < width; i += n) {
@@ -40,33 +42,31 @@ function setup() {
   octopus = new Octopus(oi);
 }
 
-function keyPressed(){
-  if (keyCode==77);{
-    if (mySound.isPlaying() == false) {
-    mySound.play();
+function keyPressed() {
+  if (keyCode === 77) {//press m
+    if (mySound.isPlaying()) {
+      mySound.pause();
+    } else {
+      mySound.play(); 
     }
   }
 }
 
 function draw() {
 
+
   push();
   colorMode(HSB, 100);
   backcolor = map(sin(frameCount * 0.05), -1, 1, 0, 100);
 
   if (mouseIsPressed) {
-    time = 500;
+    time = 900;
   }
   background(backcolor, 20, 80);
   pop();
   time -= 1;
   console.log(time);
-  // if (time == 0) {
-  //   ifCount = true;
-  //   console.log(ifCount);
-  // }
-  //background Grid
-  // if (ifCount) {
+
 
   if (time > 0) {
     countNumS = [];
@@ -107,16 +107,24 @@ function draw() {
   //squid
   squid.update();
   squid.display();
+  squid.result();
 
   octopus.update();
   octopus.display();
+  octopus.result();
 
   fill(255);
-  textSize(40);
-  text("Squid", 80, 50);
+  textFont("VT323");
+  textSize(70);
+  text("Squid", 100, 50);
   text(countS, 10, 50);
-  text("Octopus", 80, 120);
+  text("Octopus", 100, 120);
   text(countO, 10, 120);
+
+  
+console.log(timing)
+
+  
 
   if (countS >= countO) {
     result = "Squid Wins!";
@@ -130,13 +138,27 @@ function draw() {
     rectMode(CENTER);
     colorMode(HSB, 100);
     fill(backcolor, 20, 100);
-    rect(width / 2, height / 2, 500, 150);
+    rect(width / 2, height / 2, 400, 100);
     fill(backcolor, 20, 50);
-    textSize(60);
-    text(result, width / 2, height / 2);
+    textFont("VT323");
+    textSize(80);
+    text(result, width / 2, height / 2+20);
     pop();
   }
+  
+   if(starttiming==true){
+     timing=floor(time/60);
+     textFont("VT323");
+     textSize(60)
+     text(timing,width-70,50);
+     text("remaining time:",width-440,50)
+     
+ }
 }
+
+  function mousePressed(){
+  starttiming=true
+  }
 
 class Grid {
   constructor(x, y, c) {
@@ -177,7 +199,7 @@ class Squid {
     //black outline
     push();
     translate(this.x, this.y);
-    scale(0.45);
+    scale(0.6);
     noStroke();
     // Head of the squid
     fill(0);
@@ -200,7 +222,7 @@ class Squid {
     //colorful main body
     push();
     translate(this.x, this.y);
-    scale(0.4);
+    scale(0.55);
     noStroke();
 
     // Head of the squid
@@ -236,6 +258,7 @@ class Squid {
   }
 
   update() {
+    
     if (keyIsDown(74)) {
       //J
       this.x -= this.speed;
@@ -255,6 +278,25 @@ class Squid {
     this.x = constrain(this.x, 0, width);
     this.y = constrain(this.y, 0, height);
   }
+  
+  result(){
+        if(time <= 0){
+      if(result=="Squid Wins!"){
+        push();
+        translate(this.x, this.y);
+        textSize(50)
+        fill(255,255,255)
+        ellipseMode(CENTER)
+        ellipse(80,-20,130,60)
+        noStroke()
+        fill(this.c)
+        textFont("VT323");
+        text("I win!",30,-5)
+        pop()
+      }
+    }
+  }
+  
 }
 
 class Octopus {
@@ -269,7 +311,7 @@ class Octopus {
     //background outline
     push();
     translate(this.x, this.y);
-    scale(0.5);
+    scale(0.62);
     noStroke();
     fill(0);
     circle(0, -10, 150);
@@ -282,7 +324,7 @@ class Octopus {
     //colorful main body
     push();
     translate(this.x, this.y);
-    scale(0.45);
+    scale(0.58);
     noStroke();
     fill(this.c);
     circle(0, -10, 150);
@@ -325,5 +367,23 @@ class Octopus {
     this.x = constrain(this.x, 0, width);
     this.y = constrain(this.y, 0, height);
   }
+  
+    result(){
+        if(time <= 0){
+      if(result=="Octopus Wins!"){
+        push();
+        translate(this.x, this.y);
+        textSize(50)
+        fill(255,255,255)
+        ellipseMode(CENTER)
+        ellipse(80,-20,130,60)
+        noStroke()
+        fill(this.c)
+        textFont("VT323");
+        text("I win!",30,-5)
+        pop()
+      }
+    }
+  }
+  
 }
-

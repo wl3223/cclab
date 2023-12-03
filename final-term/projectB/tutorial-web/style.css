@@ -54,26 +54,26 @@ body {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 40px; /* Add space above the button */
+  margin-top: 40px; 
 }
 
 #startButton {
   padding: 20px 40px;
   border: none;
   background-image: linear-gradient(to right,black,grey,black);
-  color: white; /* Text color */
+  color: white; 
   font-weight: bold;
   font-size: 40px;
-  border-radius: 30px; /* Rounded corners */
+  border-radius: 30px; 
   border: 3px solid rgba(0, 0, 0, 0.8); 
-  cursor: pointer; /* Changes the mouse pointer on hover */
+  cursor: pointer; 
   outline: none; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease; 
 }
 
 #startButton:hover {
-  background-image: linear-gradient(to right,rgb(69, 159, 255), rgb(200,153,655)); 
+  background-image: linear-gradient(to right,orange,rgb(69, 159, 255)); 
 }
 
 .skecth-box{
@@ -83,4 +83,25 @@ height: 500px;
 margin: 10;
 padding: 0;
 background-color: black;
+}
+
+button {
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#s{
+  color: rgb(255,192,108);
+  font-family: 'Handlee', cursive;
+}
+#o{
+  color: lightskyblue;
 }

@@ -7,14 +7,37 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:wght@700&family=VT323&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dekko&family=Handlee&family=Roboto:wght@700&family=VT323&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
   <div class="content">
+    <button id="playButton">Audio</button>
+    <audio id="audioPlayer" src="g.mp3"></audio>
+    <script>
+      document.getElementById('playButton').addEventListener('click', function () {
+          var audio1 = document.getElementById('audioPlayer');
+          if (audio1.paused) {
+              audio1.play();
+          } else {
+              audio1.pause();
+          }
+      });
+  </script>
     <div class="header">
       <h1>Squiddy Meets Octopus</h1>
       <h1 id="s">"Hey! What are you doing?"</h1>
-      <h1 id="s">"Oh, Squiddy! I've been trying to color the world, but my tentacles are getting tired. My spark's feeling a little dim."</h2>
-      <h1 id="o">"Aww, don't be glum, chum! How about we make it fun? Let's have a color splash competition to get our spirits up!"</h2>
+      <h1 id="o">"Oh, Squiddy! I've been trying to color the world, but my tentacles are getting tired. My spark's feeling a little dim."</h2>
+      <h1 id="s">"Aww, don't be glum, chum! How about we make it fun? Let's have a color splash competition to get our spirits up!"</h2>
       <h1>And so, Squiddy and Octopus are ready to see who can bring more color to the world. It's painting time!</h1>
     </div>
     <div class="header">
