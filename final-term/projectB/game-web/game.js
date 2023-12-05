@@ -94,9 +94,6 @@ function draw() {
     }
   }
 
-  // ifCount = false;
-  // time = 0;
-  // }
 
   for (let i = 0; i < width; i += n) {
     for (let j = 0; j < height; j += n) {

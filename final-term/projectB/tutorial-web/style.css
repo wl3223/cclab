@@ -85,7 +85,33 @@ padding: 0;
 background-color: black;
 }
 
+.button {
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 button {
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* .back{
   background-color: black; 
   border: none;
   color: white;
@@ -96,7 +122,8 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
+} */
+
 
 #s{
   color: rgb(255,192,108);

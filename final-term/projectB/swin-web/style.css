@@ -66,12 +66,25 @@ body {
 button {
   background-image: linear-gradient(to bottom,lightpink, rgb(255,226,108),lightpink);
   border: none;
+  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 30px;
   margin: 4px 2px;
   cursor: pointer;
 }
 
+.button {
+  background-color:rgb(255, 129, 18) ;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
