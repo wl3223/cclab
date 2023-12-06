@@ -10,8 +10,10 @@ function preload() {
 
 function draw() {
   if (mouseIsPressed) {
-    if (mySound.isPlaying() == false) {
-      mySound.play();
+    if (mySound.isPlaying()) {
+      mySound.pause();
+    } else {
+      mySound.play(); 
     }
   }
   

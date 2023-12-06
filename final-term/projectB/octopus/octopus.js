@@ -12,11 +12,15 @@ function preload() {
 function draw() {
 let canvas=createCanvas(300, 300);
 canvas.parent("octopus");
+
   if (mouseIsPressed) {
-    if (mySound.isPlaying() == false) {
-      mySound.play();
-    }
-  }
+        if (mySound.isPlaying()) {
+          mySound.pause();
+        } else {
+          mySound.play(); 
+        }
+      }
+    
   
   colorMode(HSB,100);
   oc=map(sin(frameCount*0.015),-1,1,45,75);

@@ -7,7 +7,7 @@ let squid;
 let countS = 0;
 let countO = 0;
 let ifCount = false;
-let time = 5000; 
+let time = 10000; 
 let result;
 let backcolor, backbase;
 let SquidColor = [];
