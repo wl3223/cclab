@@ -31,7 +31,7 @@ function setup() {
     }
   }
 
-  //color
+  //random colors of the squid and the octopus
   SquidColor = [color(255, 204, 0), color(243, 89, 135), color(250, 143, 61)];
   OctopusColor = [color(74, 58, 219), color(89, 243, 187), color(193, 65, 225)];
 
@@ -42,8 +42,9 @@ function setup() {
   octopus = new Octopus(oi);
 }
 
+//press m to play or pause the sound
 function keyPressed() {
-  if (keyCode === 77) {//press m
+  if (keyCode === 77) {
     if (mySound.isPlaying()) {
       mySound.pause();
     } else {
@@ -59,6 +60,7 @@ function draw() {
   colorMode(HSB, 100);
   backcolor = map(sin(frameCount * 0.05), -1, 1, 0, 100);
 
+  //press the mouse to start the game and count the time
   if (mouseIsPressed) {
     time = 900;
   }
@@ -67,7 +69,8 @@ function draw() {
   time -= 1;
   console.log(time);
 
-
+  //when the game is start, by detecting the color of each grid to
+  //count the number of the grid which is changed by two characters
   if (time > 0) {
     countNumS = [];
     countNumO = [];
@@ -122,7 +125,8 @@ function draw() {
 console.log(timing)
 
   
-
+  // if the number of the squid color grids outnumber the octopus ones
+  //show the result of squid wins, vice versa
   if (countS >= countO) {
     result = "Squid Wins!";
   } else {
@@ -143,6 +147,7 @@ console.log(timing)
     pop();
   }
   
+  //showing the remaining time when the game is on
    if(starttiming==true){
      timing=floor(time/60);
      textFont("VT323");
@@ -152,7 +157,7 @@ console.log(timing)
      
  }
 }
-
+  //press the mouse to start the game. start counting time
   function mousePressed(){
   starttiming=true
   }
@@ -276,6 +281,7 @@ class Squid {
     this.y = constrain(this.y, 0, height);
   }
   
+  //if one sided wins, then make a small dialog box above the character
   result(){
         if(time <= 0){
       if(result=="Squid Wins!"){
